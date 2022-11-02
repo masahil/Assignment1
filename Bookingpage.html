@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <head> 
+    <title></title>
+    <link rel="stylesheet" href="booking.css">
+  </head>
+<form action="bookingdatabase.php" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="Example:-sahil" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="Example:-sahil,u@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="visitor_phone" placeholder="Example:-1234567890" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Adults</label>
+    <input type="number" id="adult" name="total_adults" min="1" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="child">Children</label>
+    <input type="number" id="child" name="total_children" min="0" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="Booking-Date"> Date</label>
+    <input type="date" id="date" name="Booking_date" required>
+  </div>
+  <div class="elem-group">
+    <select id="Place-selection" name="location" required>
+        <option value="Choose a place from the List">Choose a place from the List</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Jaipur">Mumbai</option>
+        <option value="Mumbai">Hyderabad</option>
+        <option value="Kerala">Chennai</option>
+    </select>
+  </div>
+  <div>
+  <hr>
+  <div class="elem-group">
+    <label>Aadhaar Card</label>
+    <form>
+      <form action = "Upload.php" method = "POST" enctype = "multipart/form-data">
+          <input type="file" name="image"/>  </div>
+  <button type="submit" name="submit">Book The Ticket</button>
+</form>
